@@ -1,0 +1,93 @@
+/* 
+  Author: Connor Tolderlund
+  Email: connor_tolderlund@student.uml.edu 
+*/
+
+/* makes changin colors easier */
+:root {
+  --th-color: #cdc5b4;
+  --th-color-darker: #aca597;
+
+  --td-color: #dec0c8;
+  --td-color-darker: #ae979d;
+}
+
+* {
+  font-family: "Poppins";
+  padding: 0px;
+  margin: 0px;
+}
+
+/* submit button styling */
+#recalc-btn {
+  font-weight: 600;
+  background-color: var(--th-color-darker);
+  border: solid 2px /* some color */;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+#recalc-btn:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+#table-range-form {
+  background-color: var(--th-color);
+  border-radius: 1rem;
+  border: solid 2px;
+}
+
+th {
+  background-color: var(--th-color);
+}
+
+th,
+td {
+  width: 10rem;
+  height: 3rem;
+  border: solid 2px;
+  table-layout: fixed;
+}
+
+/* alternating colors on the mult table */
+td:nth-child(2n) {
+  background-color: var(--td-color-darker);
+}
+td:nth-child(2n + 1) {
+  background-color: var(--td-color);
+}
+
+#table-container {
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 2px;
+}
+
+#table-container {
+  overflow: scroll;
+  max-height: 60vh;
+  max-width: 50vw;
+}
+
+/* top-most table headers are frozen */
+thead > tr > th {
+  top: 0;
+  position: sticky;
+}
+
+/* left-most table headers are frozen */
+tbody > tr > th {
+  left: 0;
+  position: sticky;
+}
+
+/* utility class for JS */
+.visible {
+  visibility: visible;
+}
+
+/* utility class for JS */
+.hidden {
+  visibility: hidden;
+}
